@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+
+# Testing & Cache
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local databases
+*.db
+*.sqlite3
+
+# Large data & model artifacts (can be recreated via cli ingest / backtest)
+data/raw/*.csv
+data/models/*.joblib
+!data/raw/.gitkeep
+!data/models/.gitkeep
+
+# OS / Editor files
+.DS_Store
+.idea/
+.vscode/
