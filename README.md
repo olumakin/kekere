@@ -113,10 +113,30 @@ python3 -m skynet.cli audit --limit 20
 
 ---
 
-## 4. Running Tests
+## 4. Streamlit Web Dashboard (Phase 2)
+
+Launch the interactive dashboard locally:
+```bash
+streamlit run app.py
+```
+
+Features included:
+- **Executive Overview & Governance**: Key KPIs (Total Matches, Bets, Win Rate, PnL, ROI, CLV, Max Drawdown) and §2 Go/No-Go Gate status banner.
+- **Financial Analytics**: Cumulative PnL curves, seasonal ROI tables, and monthly PnL distributions.
+- **Model Calibration & Cox**: Reliability diagrams, Cox calibration slopes/intercepts, and Brier score tracking.
+- **Audit Trail Explorer**: Filterable records for all fixtures (including No-Bet outcomes).
+- **Interactive Match Predictor**: Live 1X2 odds devigging, draw value assessment, and score probability heatmaps.
+
+Deploy to Streamlit Community Cloud in 1-click:
+[![Deploy to Streamlit Cloud](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/deploy?repository=olumakin/kekere&branch=main&mainModule=app.py)
+
+---
+
+## 5. Running Tests
 
 The test suite validates pricing devigging, Elo churn priors, Dixon-Coles likelihood & Poisson matrix calculation, Platt and Cox calibration, Fractional Kelly staking, and 100% prediction reproducibility from serialized artifacts:
 
 ```bash
 pytest -v
 ```
+
