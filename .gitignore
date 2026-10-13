@@ -16,12 +16,12 @@ ENV/
 htmlcov/
 
 # Local databases
-*.db
 *.sqlite3
+!skynet_championship.db
 
-# Large data & model artifacts (can be recreated via cli ingest / backtest)
+# Large data & model artifacts
 data/raw/*.csv
-data/models/*.joblib
+!data/models/*.joblib
 !data/raw/.gitkeep
 !data/models/.gitkeep
 
